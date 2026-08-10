@@ -1,0 +1,3 @@
+export default function Timeline({ tokens }) {
+  return <section className="panel timeline-panel"><div className="section-heading"><div><p className="eyebrow">04 · Sequenz</p><h2>Zeitlinie</h2></div><span className="mono-label">WORT FÜR WORT</span></div><div className="timeline">{tokens.length ? tokens.map((token, index) => <div className="timeline-item" key={token.id}><div className={`timeline-box language-${index % 5}`} title={token.language}>{token.id}</div>{token.switchBefore && <div className="switch-line" />}</div>) : <span className="empty-state">Die analysierte Sequenz erscheint hier.</span>}</div></section>
+}
